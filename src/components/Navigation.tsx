@@ -1,23 +1,35 @@
+import NavigationLink from './NavigationLink';
+
 const Navigation = () => {
+  const navigationLinks = [
+    {
+      href: '/',
+      title: 'Home',
+    },
+    {
+      href: '#about',
+      title: 'About',
+    },
+    {
+      href: '#factors',
+      title: '12 Factors',
+    },
+    {
+      href: '#fact',
+      title: 'Fact',
+    },
+    {
+      href: '#bonus',
+      title: 'Bonus',
+    },
+  ];
+
+  const linkList = navigationLinks.map((l) => (
+    <NavigationLink key={l.href} href={l.href} title={l.title} />
+  ));
   return (
     <nav>
-      <ul>
-        <li>
-          <a href="/">Home</a>
-        </li>
-        <li>
-          <a href="#about">About</a>
-        </li>
-        <li>
-          <a href="#factors">12 Factors</a>
-        </li>
-        <li>
-          <a href="#fact">Fact</a>
-        </li>
-        <li>
-          <a href="#bonus">Bonus</a>
-        </li>
-      </ul>
+      <ul className="flex justify-self-end">{linkList}</ul>
     </nav>
   );
 };
