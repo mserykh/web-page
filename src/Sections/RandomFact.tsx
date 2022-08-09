@@ -1,6 +1,6 @@
 import Section from '../components/Section';
 
-const Subscribe = () => {
+const RandomFact = () => {
   return (
     <Section id="fact" title="Random fact">
       <p>Fact</p>
@@ -8,4 +8,4 @@ const Subscribe = () => {
   );
 };
 
-export default Subscribe;
+export default RandomFact;
