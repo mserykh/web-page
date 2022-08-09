@@ -1,9 +1,16 @@
 type SectionProps = {
-  children: React.ReactNode;
+  id?: string;
+  title?: string;
+  children?: React.ReactNode;
 };
 
 const Section = (props: SectionProps) => {
-  return <section>{props.children}</section>;
+  return (
+    <section>
+      <h2>{props.title}</h2>
+      {props.children}
+    </section>
+  );
 };
 
 export default Section;

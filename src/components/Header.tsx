@@ -1,13 +1,15 @@
 import Logo from './Logo';
+import Navigation from './Navigation';
 
-const AppHeader: React.FC = () => {
+const Header: React.FC = () => {
   return (
     <div className="">
       <header>
         <Logo />
+        <Navigation />
       </header>
     </div>
   );
 };
 
-export default AppHeader;
+export default Header;

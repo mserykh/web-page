@@ -12,7 +12,7 @@ const Factors = () => {
   ));
 
   return (
-    <Section>
+    <Section id="factors" title="The Twelve Factors">
       <ul>{factorsList}</ul>
     </Section>
   );

@@ -2,8 +2,8 @@ import Section from '../components/Section';
 
 const Subscribe = () => {
   return (
-    <Section id="bonus">
-      <h2>Bonus factor</h2>
+    <Section id="fact" title="Random fact">
+      <p>Fact</p>
     </Section>
   );
 };

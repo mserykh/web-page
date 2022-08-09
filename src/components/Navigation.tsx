@@ -2,9 +2,21 @@ const Navigation = () => {
   return (
     <nav>
       <ul>
-        <li>{/* <NavLink to="/">Home</NavLink> */}</li>
-        <li>{/* <NavLink to="/about"></NavLink> */}</li>
-        <li>{/* <NavLink to="/reviews"></NavLink> */}</li>
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="#about">About</a>
+        </li>
+        <li>
+          <a href="#factors">12 Factors</a>
+        </li>
+        <li>
+          <a href="#fact">Fact</a>
+        </li>
+        <li>
+          <a href="#bonus">Bonus</a>
+        </li>
       </ul>
     </nav>
   );
