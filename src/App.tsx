@@ -1,8 +1,15 @@
 import React from 'react';
-import './App.css';
+import Home from './pages/Home';
+import Layout from './containers/Layout';
 
-function App() {
-  return <h1>12 factors application</h1>;
-}
+const App: React.FC = () => {
+  return (
+    <>
+      <Layout>
+        <Home />
+      </Layout>
+    </>
+  );
+};
 
 export default App;
