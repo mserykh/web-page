@@ -1,7 +1,7 @@
 import About from '../Sections/About';
 import Factors from '../Sections/Factors';
 import Hero from '../Sections/Hero';
-import RandomFact from '../Sections/RandomFact';
+import RandomQuote from '../Sections/RandomQuote';
 import Subscribe from '../Sections/Subscribe';
 
 const Home = () => {
@@ -10,7 +10,7 @@ const Home = () => {
       <Hero />
       <About />
       <Factors />
-      <RandomFact />
+      <RandomQuote />
       <Subscribe />
     </>
   );
