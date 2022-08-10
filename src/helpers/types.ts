@@ -7,4 +7,5 @@ export type FactorInfo = {
 export type NavigationLinkData = {
   href: string;
   title: string;
+  offset: number;
 };

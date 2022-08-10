@@ -2,24 +2,29 @@ import { FactorInfo, NavigationLinkData } from './types';
 
 export const navigationLinks: NavigationLinkData[] = [
   {
-    href: '/',
+    href: 'hero',
     title: 'Home',
+    offset: -150,
   },
   {
-    href: '#about',
+    href: 'about',
     title: 'About',
+    offset: -150,
   },
   {
-    href: '#factors',
+    href: 'factors',
     title: '12 Factors',
+    offset: -150,
   },
   {
-    href: '#quote',
+    href: 'quote',
     title: 'Random Quote',
+    offset: -150,
   },
   {
-    href: '#bonus',
+    href: 'bonus',
     title: 'Bonus',
+    offset: -150,
   },
 ];
 

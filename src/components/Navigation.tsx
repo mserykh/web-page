@@ -2,12 +2,19 @@ import { navigationLinks } from '../helpers/constants';
 import NavigationLink from './NavigationLink';
 
 type NavigationProps = {
+  onClick: () => void;
   isOpen: boolean;
 };
 
 const Navigation = (props: NavigationProps) => {
   const linkList = navigationLinks.map((l) => (
-    <NavigationLink key={l.href} href={l.href} title={l.title} />
+    <NavigationLink
+      key={l.href}
+      href={l.href}
+      title={l.title}
+      offset={l.offset}
+      onClick={props.onClick}
+    />
   ));
 
   return (
