@@ -1,10 +1,10 @@
-import { useState } from 'react';
-import Burger from './Burger';
 import NavigationLink from './NavigationLink';
 
-const Navigation = () => {
-  const [isSideMenuOpen, setSideMenuOpen] = useState(false);
+type NavigationProps = {
+  isOpen: boolean;
+};
 
+const Navigation = (props: NavigationProps) => {
   const navigationLinks = [
     {
       href: '/',
@@ -31,13 +31,16 @@ const Navigation = () => {
   const linkList = navigationLinks.map((l) => (
     <NavigationLink key={l.href} href={l.href} title={l.title} />
   ));
+
   return (
     <nav>
-      <ul className="hidden lg:flex justify-self-end">{linkList}</ul>
-      <Burger
-        onClick={() => setSideMenuOpen(!isSideMenuOpen)}
-        burgerState={isSideMenuOpen}
-      />
+      <ul
+        className={`${
+          props.isOpen ? 'translate-x-0' : 'translate-x-[100%]'
+        } bg-violet-600 fixed top-0 left-0 w-full h-full mt-[154px] mx-auto items-center lg:mt-auto lg:translate-x-0 lg:static flex flex-col lg:flex-row lg:justify-self-end transition duration-1000 delay-250 ease`}
+      >
+        {linkList}
+      </ul>
     </nav>
   );
 };
