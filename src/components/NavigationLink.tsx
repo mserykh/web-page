@@ -1,3 +1,5 @@
+import { Link } from 'react-scroll';
+
 type NavigationLinkProps = {
   href: string;
   title: string;
@@ -6,9 +8,16 @@ type NavigationLinkProps = {
 const NavigationLink = (props: NavigationLinkProps) => {
   return (
     <li>
-      <a className="p-4" href={props.href}>
+      <Link
+        className="p-4 text-xl font-bold uppercase"
+        activeClass="font-black"
+        to={props.href}
+        offset={-70}
+        spy={true}
+        smooth={true}
+      >
         {props.title}
-      </a>
+      </Link>
     </li>
   );
 };
