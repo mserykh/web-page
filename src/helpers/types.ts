@@ -3,3 +3,8 @@ export type FactorInfo = {
   title: string;
   description: string;
 };
+
+export type NavigationLinkData = {
+  href: string;
+  title: string;
+};

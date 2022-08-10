@@ -1,3 +1,4 @@
+import { navigationLinks } from '../helpers/constants';
 import NavigationLink from './NavigationLink';
 
 type NavigationProps = {
@@ -5,29 +6,6 @@ type NavigationProps = {
 };
 
 const Navigation = (props: NavigationProps) => {
-  const navigationLinks = [
-    {
-      href: '/',
-      title: 'Home',
-    },
-    {
-      href: '#about',
-      title: 'About',
-    },
-    {
-      href: '#factors',
-      title: '12 Factors',
-    },
-    {
-      href: '#fact',
-      title: 'Fact',
-    },
-    {
-      href: '#bonus',
-      title: 'Bonus',
-    },
-  ];
-
   const linkList = navigationLinks.map((l) => (
     <NavigationLink key={l.href} href={l.href} title={l.title} />
   ));

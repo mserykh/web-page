@@ -1,4 +1,27 @@
-import { FactorInfo } from './types';
+import { FactorInfo, NavigationLinkData } from './types';
+
+export const navigationLinks: NavigationLinkData[] = [
+  {
+    href: '/',
+    title: 'Home',
+  },
+  {
+    href: '#about',
+    title: 'About',
+  },
+  {
+    href: '#factors',
+    title: '12 Factors',
+  },
+  {
+    href: '#quote',
+    title: 'Random Quote',
+  },
+  {
+    href: '#bonus',
+    title: 'Bonus',
+  },
+];
 
 export const factorsData: FactorInfo[] = [
   {
@@ -63,3 +86,6 @@ export const factorsData: FactorInfo[] = [
     description: 'Run admin/management tasks as one-off processes',
   },
 ];
+
+export const ENDPOINT =
+  'https://programming-quotes-api.herokuapp.com/quotes/random';
