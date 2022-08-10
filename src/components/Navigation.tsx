@@ -1,6 +1,10 @@
+import { useState } from 'react';
+import Burger from './Burger';
 import NavigationLink from './NavigationLink';
 
 const Navigation = () => {
+  const [isSideMenuOpen, setSideMenuOpen] = useState(false);
+
   const navigationLinks = [
     {
       href: '/',
@@ -29,7 +33,11 @@ const Navigation = () => {
   ));
   return (
     <nav>
-      <ul className="flex justify-self-end">{linkList}</ul>
+      <ul className="hidden lg:flex justify-self-end">{linkList}</ul>
+      <Burger
+        onClick={() => setSideMenuOpen(!isSideMenuOpen)}
+        burgerState={isSideMenuOpen}
+      />
     </nav>
   );
 };
