@@ -1,4 +1,4 @@
-import Section from '../components/Section';
+import SectionHero from '../components/SectionHero';
 
 type HeroProps = {
   children?: React.ReactNode;
@@ -6,12 +6,12 @@ type HeroProps = {
 
 const Hero = (props: HeroProps) => {
   return (
-    <Section>
-      <p className="text-6xl font-bold">
-        Helps to develop modular, independent, portable, and scalable an
+    <SectionHero>
+      <p className="w-3/4 md:w-full text-left text-6xl font-bold">
+        Helps to develop modular, independent, portable, and scalable
         applications.
       </p>
-    </Section>
+    </SectionHero>
   );
 };
 

@@ -1,13 +1,13 @@
-const AppFooter: React.FC = () => {
+const Footer: React.FC = () => {
   return (
-    <div>
-      <footer>
+    <footer className="container mx-auto px-10 py-6">
+      <div className="flex justify-between items-center">
         <span>© 2022</span>
         <a href="https://github.com/mserykh">mserykh</a>
         <span>Made for</span>
-      </footer>
-    </div>
+      </div>
+    </footer>
   );
 };
 
-export default AppFooter;
+export default Footer;

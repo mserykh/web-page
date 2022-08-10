@@ -6,7 +6,7 @@
   * {
     box-sizing: border-box;
   }
-  
+
   html {
     font-family: Inter, sans-serif;
     font-weight: 500;
@@ -14,7 +14,8 @@
 
   body {
     margin: 0;
-    line-height: 1.5;
+    font-size: 1.5rem;
+    line-height: 2;
     @apply bg-violet-600 text-orange-50;
   }
 }
