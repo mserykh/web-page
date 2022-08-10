@@ -6,7 +6,7 @@ type HeroProps = {
 
 const Hero = (props: HeroProps) => {
   return (
-    <SectionHero>
+    <SectionHero id="hero">
       <p className="w-3/4 md:w-full text-left text-6xl font-bold">
         Helps to develop modular, independent, portable, and scalable
         applications.

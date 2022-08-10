@@ -1,4 +1,5 @@
 type SectionProps = {
+  id: string;
   children: React.ReactNode;
 };
 
