@@ -3,7 +3,7 @@ import Quote from '../components/Quote';
 import Section from '../components/Section';
 import Spinner from '../components/Spinner';
 import { QuoteResponse } from '../helpers/models';
-import apiService from '../services/api';
+import getQuote from '../services/api';
 
 const RandomQuote = () => {
   const [quote, setQuote] = useState<QuoteResponse | null>(null);
@@ -11,12 +11,12 @@ const RandomQuote = () => {
   const [error, setError] = useState<boolean>(false);
 
   useEffect(() => {
-    getQuote();
+    loadQuote();
   }, []);
 
-  const getQuote = (): void => {
+  const loadQuote = (): void => {
     setIsLoading(true);
-    apiService()
+    getQuote()
       .then((result) => {
         setQuote(result);
         setIsLoading(false);
@@ -33,20 +33,24 @@ const RandomQuote = () => {
   if (isLoading) {
     quoteData = <Spinner />;
   } else if (error) {
-    quoteData = <p>Please try again</p>;
+    quoteData = (
+      <p className="text-md leading-8">
+        Oops. Something went wrong. Please check it later
+      </p>
+    );
   } else if (quote) {
     quoteData = <Quote quoteInfo={quote} />;
   }
   console.log('rerender');
 
   return (
-    <Section id="fact" title="Random quote">
-      <div className="mx-auto min-h-12 px-12 py-4 w-3/4 bg-orange-50 text-violet-600 rounded-lg">
+    <Section id="quote" title="Random quote">
+      <div className="mx-auto h-36 max-h-fit px-12 py-4 w-3/4 bg-orange-50 text-violet-600 rounded-lg">
         {quoteData}
       </div>
       <button
         onClick={getQuote}
-        className="block mx-auto mt-4 px-4 uppercase font-bold border-2 border-orange-50"
+        className="block mx-auto mt-12 px-4 uppercase font-bold border-2 border-orange-50"
       >
         Another one please
       </button>
