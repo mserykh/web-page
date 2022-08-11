@@ -1,6 +1,6 @@
 import Section from '../components/Section';
 
-const Subscribe = () => {
+const About = () => {
   return (
     <Section id="about" title="What Is the Twelve-Factor Methodology?">
       <p className="text-lg">
@@ -14,4 +14,4 @@ const Subscribe = () => {
   );
 };
 
-export default Subscribe;
+export default About;
