@@ -14,6 +14,12 @@ module.exports = {
         '3/4': '75%',
       },
     },
+    keyframes: {
+      jump: {
+        '0%, 40%, 100%': { transform: 'translateY(0)' },
+        '20%': { transform: 'translateY(-0.5rem)' },
+      },
+    },
   },
   plugins: [],
 };

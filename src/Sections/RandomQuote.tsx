@@ -11,21 +11,28 @@ const RandomQuote = () => {
   const [error, setError] = useState<boolean>(false);
 
   useEffect(() => {
-    loadQuote();
+    setIsLoading(true);
+    const timeout = setTimeout(() => {
+      loadQuote();
+    }, 500);
+
+    return () => clearTimeout(timeout);
   }, []);
 
   const loadQuote = (): void => {
+    setTimeout(() => {
+      getQuote()
+        .then((result) => {
+          setQuote(result);
+          setIsLoading(false);
+          setError(false);
+        })
+        .catch(() => {
+          setIsLoading(false);
+          setError(true);
+        });
+    }, 750);
     setIsLoading(true);
-    getQuote()
-      .then((result) => {
-        setQuote(result);
-        setIsLoading(false);
-        setError(false);
-      })
-      .catch(() => {
-        setIsLoading(false);
-        setError(true);
-      });
   };
 
   let quoteData;
@@ -41,15 +48,14 @@ const RandomQuote = () => {
   } else if (quote) {
     quoteData = <Quote quoteInfo={quote} />;
   }
-  console.log('rerender');
 
   return (
     <Section id="quote" title="Random quote">
-      <div className="mx-auto h-36 max-h-fit px-12 py-4 w-3/4 bg-orange-50 text-violet-600 rounded-lg">
+      <div className="mx-auto min-h-40 max-h-full px-12 py-4 w-3/4 bg-orange-50 text-violet-600 rounded-lg">
         {quoteData}
       </div>
       <button
-        onClick={getQuote}
+        onClick={loadQuote}
         className="block mx-auto mt-12 px-4 uppercase font-bold border-2 border-orange-50"
       >
         Another one please
