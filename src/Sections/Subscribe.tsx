@@ -1,4 +1,4 @@
-import Section from '../components/Section';
+import Section from '../layouts/Section';
 import Form from '../components/SubscriptionFrom/Form';
 
 const Subscribe = () => {

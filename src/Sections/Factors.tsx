@@ -2,7 +2,7 @@ import { factorsData } from '../helpers/constants';
 import { FactorInfo } from '../helpers/types';
 
 import FactorCard from '../components/FactorCard/FactorCard';
-import Section from '../components/Section';
+import Section from '../layouts/Section';
 
 const Factors = () => {
   const factorsList = factorsData.map((f: FactorInfo) => (

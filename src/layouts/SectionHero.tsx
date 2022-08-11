@@ -5,7 +5,7 @@ type SectionProps = {
 
 const SectionHero = (props: SectionProps) => {
   return (
-    <section className="h-screen mx-auto px-4 mb-10 font-lato-black">
+    <section className="relative h-hero mx-auto mb-32 px-4 grid font-lato-black object-contain overflow-hidden">
       {props.children}
     </section>
   );
