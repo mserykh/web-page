@@ -2,6 +2,11 @@ module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
+      fontFamily: {
+        lato: ['Lato', 'Verdana'],
+        'lato-bold': 'Lato Bold',
+        'lato-black': 'Lato Black',
+      },
       transform: {
         '3d': 'translate3d(100px,0,0)',
       },
