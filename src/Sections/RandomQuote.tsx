@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import Quote from '../components/Quote';
-import Section from '../components/Section';
+import Section from '../layouts/Section';
 import Spinner from '../components/Spinner';
 import { QuoteResponse } from '../helpers/models';
 import getQuote from '../services/api';
