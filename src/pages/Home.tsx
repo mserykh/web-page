@@ -1,8 +1,8 @@
-import About from '../Sections/About';
-import Factors from '../Sections/Factors';
-import Hero from '../Sections/Hero';
-import RandomQuote from '../Sections/RandomQuote';
-import Subscribe from '../Sections/Subscribe';
+import About from '../sections/About';
+import Factors from '../sections/Factors';
+import Hero from '../sections/Hero';
+import RandomQuote from '../sections/RandomQuote';
+import Subscribe from '../sections/Subscribe';
 
 const Home = () => {
   return (
