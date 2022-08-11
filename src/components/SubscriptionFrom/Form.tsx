@@ -1,19 +1,19 @@
 import { useForm } from 'react-hook-form';
 
-import { useEffect, useState } from 'react';
 import EmailInput from './EmailInput';
+import NameInput from './NameInput';
 
-export type FormData = {
+export type FormValues = {
   email: string;
   name: string;
 };
 
 type FormProps = {
-  subscribe: (formData: FormData) => void;
+  subscribe: (formData: FormValues) => void;
 };
 
 const Form = ({ subscribe }: FormProps): JSX.Element => {
-  const form = useForm<FormData>({
+  const form = useForm<FormValues>({
     mode: 'onSubmit',
     reValidateMode: 'onSubmit',
   });
@@ -27,7 +27,7 @@ const Form = ({ subscribe }: FormProps): JSX.Element => {
       (element) => element === true
     );
 
-  const onSubmit = (data: FormData): void => {
+  const onSubmit = (data: FormValues): void => {
     subscribe({ ...data });
     form.reset();
   };
@@ -40,6 +40,7 @@ const Form = ({ subscribe }: FormProps): JSX.Element => {
         data-testid="form"
       >
         <EmailInput form={form} />
+        <NameInput form={form} />
         <button
           type="submit"
           className="block mx-auto mt-12 px-4 uppercase font-bold border-2 border-orange-50"

@@ -10,7 +10,7 @@ const Subscribe = () => {
     name: string;
   }): void => {
     console.log(
-      `${name}You have subscribed with your  email ${email}! Confetti`
+      `${name}, you have subscribed with your email: ${email}! Confetti!`
     );
   };
 

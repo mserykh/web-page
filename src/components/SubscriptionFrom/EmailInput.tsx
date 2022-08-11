@@ -1,16 +1,17 @@
 import { UseFormReturn } from 'react-hook-form';
+import { FormValues } from './Form';
+
 type EmailInputProps = {
-  form: UseFormReturn<FormData>;
+  form: UseFormReturn<FormValues>;
 };
+
 const EmailInput = ({ form }: EmailInputProps): JSX.Element => {
   return (
-    <div className="">
-      <label className="" htmlFor="email">
-        Email:
-      </label>
+    <div>
+      <label htmlFor="email">Email:</label>
       <input
         {...form.register('email', {
-          required: 'Please type ypur email',
+          required: 'Please type your email',
           minLength: {
             value: 2,
             message: 'The title should contain at least 2 characters',
@@ -24,9 +25,7 @@ const EmailInput = ({ form }: EmailInputProps): JSX.Element => {
         placeholder="Type your email"
       />
       {form.formState.errors.email?.message && (
-        <p className={styles.errorText}>
-          {form.formState.errors.email.message}
-        </p>
+        <p className="">{form.formState.errors.email.message}</p>
       )}
     </div>
   );
