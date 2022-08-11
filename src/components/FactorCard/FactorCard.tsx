@@ -25,11 +25,11 @@ const FactorCard = ({ factorInfo }: CardProps) => {
 
   return (
     <>
-      <div className="flex gap-4 items-center">
+      <div className="flex gap-4 lg:gap-8 place-self-end items-center row-start-1 row-end-3 col-start-1 col-end-3">
         <FactorIcon isVisible={isVisible} />
         <FactorNumber isVisible={isVisible} factorNumber={factorInfo.id} />
       </div>
-      <div ref={cardEl} className="">
+      <div ref={cardEl} className="row-start-2 row-end-4 col-start-3 col-end-5">
         <h4
           className={`mb-4 text-4xl lg:text-6xl font-bold transition delay-150 duration-500 ${
             isVisible ? 'translate-x-0' : 'opacity-0 translate-x-[50%]'

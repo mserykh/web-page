@@ -8,7 +8,7 @@ const Factors = () => {
   const factorsList = factorsData.map((f: FactorInfo) => (
     <li
       key={f.id.toString()}
-      className="p-6 w-full max-w-3/4 bg-orange-50  text-violet-600"
+      className="p-6 w-full max-w-3/4 grid grid-cols-4 grid-rows-3 text-orange-50"
     >
       <FactorCard factorInfo={f} />
     </li>
@@ -16,7 +16,9 @@ const Factors = () => {
 
   return (
     <Section id="factors" title="The Twelve Factors">
-      <ul className="flex flex-col items-center gap-6">{factorsList}</ul>
+      <ul className="flex flex-col items-center gap-6 lg:gap-y-24">
+        {factorsList}
+      </ul>
     </Section>
   );
 };
