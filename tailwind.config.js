@@ -18,6 +18,9 @@ module.exports = {
         '1/2': '50%',
         '3/4': '75%',
       },
+      height: {
+        hero: 'calc(100vh - 90px)',
+      },
     },
     keyframes: {
       jump: {
