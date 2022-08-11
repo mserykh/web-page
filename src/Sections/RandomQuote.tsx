@@ -51,7 +51,7 @@ const RandomQuote = () => {
 
   return (
     <Section id="quote" title="Random quote">
-      <div className="mx-auto min-h-40 max-h-full px-12 py-4 w-3/4 bg-orange-50 text-violet-600 rounded-lg">
+      <div className="mx-auto px-12 py-4 w-3/4 bg-orange-50 text-violet-600 rounded-lg">
         {quoteData}
       </div>
       <button
