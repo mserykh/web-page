@@ -20,7 +20,7 @@ const AboutCard = () => {
   return (
     <p
       ref={cardEl}
-      className={`mx-auto max-w-prose text-3xl font-mono transition delay-100 duration-350 ${
+      className={`mx-auto max-w-prose text-3xl font-mono transition delay-100 duration-500 ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
       }`}
     >

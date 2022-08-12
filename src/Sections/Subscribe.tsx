@@ -41,7 +41,7 @@ const Subscribe = () => {
 
   return (
     <Section title={'Bonus factor'} id="bonus">
-      <p className="font-mono mb-8 lg:mb-16 text-lime-400">
+      <p className="font-mono mb-8 text-center lg:mb-16 text-3xl text-lime-400">
         There is another important factor. Get it to your email!
       </p>
       <div

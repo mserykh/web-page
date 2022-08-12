@@ -7,7 +7,7 @@ type QuoteProps = {
 
 const Quote = ({ quoteInfo }: QuoteProps) => {
   return (
-    <div className="mx-auto max-w-prose lg:text-3xl">
+    <div className="relative mx-auto max-w-prose lg:text-3xl">
       <blockquote className="mb-4 flex items-center text-slate-400 ">
         <p>{`"${quoteInfo.en}"`}</p>
       </blockquote>
