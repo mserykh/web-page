@@ -3,11 +3,7 @@ import videoUrl from '../assets/videos/hero@reduced.mp4';
 import smallVideoUrl from '../assets/videos/hero@480.mp4';
 import logo from '../assets/icons/logo.png';
 
-type HeroProps = {
-  children?: React.ReactNode;
-};
-
-const Hero = (props: HeroProps) => (
+const Hero = () => (
   <>
     <SectionHero id="hero">
       <video

@@ -1,5 +1,3 @@
-import { useEffect } from 'react';
-
 type ModalProps = {
   name: string | null;
   isOpen: boolean;

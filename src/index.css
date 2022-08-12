@@ -159,7 +159,7 @@
 }
 
 .colors {
-  transform: translate(calc(var(--posX) * 1.5px), calc(var(--posY) * .75px));
+  transform: translate(calc(var(--posX) * 1.5px), calc(var(--posY) * 0.75px));
 }
 
 .popup {

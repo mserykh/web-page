@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { QuoteResponse } from '../helpers/models';
 
 type QuoteProps = {
