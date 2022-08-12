@@ -2,7 +2,7 @@ import FactorIcon from './FactorIcon';
 
 type FactorIconProps = {
   isVisible: boolean;
-  factorIconId?: string;
+  factorIconId: string;
 };
 
 const FactorIconBlock = (props: FactorIconProps) => {
