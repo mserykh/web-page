@@ -1,6 +1,7 @@
 import SectionHero from '../layouts/SectionHero';
 import videoUrl from '../assets/videos/hero@reduced.mp4';
 import smallVideoUrl from '../assets/videos/hero@480.mp4';
+import logo from '../assets/icons/logo.png';
 
 type HeroProps = {
   children?: React.ReactNode;
@@ -22,9 +23,19 @@ const Hero = (props: HeroProps) => (
           media="all and (max-width: 480px)"
         ></source>
       </video>
-      <p className="w-3/4 max-w-prose self-center justify-self-end text-left text-3xl md:text-5xl lg:text-7xl font-bold">
-        Helps to develop modular, independent, portable, and scalable
-        applications.
+      <img src={logo} className="h-56" alt="" />
+      <p className="text-left text-3xl md:text-5xl lg:text-7xl">
+        Helps to develop{' '}
+        <span className="text-4xl md:text-6xl lg:text-8xl">modular</span>,<br />
+        <span className="text-4xl md:text-6xl lg:text-8xl">
+          independent
+        </span>,{' '}
+        <span className="text-4xl md:text-6xl lg:text-8xl">portable</span>,
+        <br />
+        and <span className="text-4xl md:text-6xl lg:text-8xl">
+          scalable
+        </span>{' '}
+        applications
       </p>
     </SectionHero>
   </>

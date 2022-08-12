@@ -7,22 +7,22 @@ const Burger = (props: BurgerProps) => {
   return (
     <div
       onClick={props.onClick}
-      className="lg:hidden relative w-[40px] h-[40px] cursor-pointer overflow-hidden"
+      className="lg:hidden relative w-[40px] h-[40px] cursor-pointer overflow-hidden "
     >
       <span
-        className={`absolute w-full h-[4px] bg-orange-50 transition ease-in-out ${
+        className={`absolute w-full h-[4px] bg-slate-100 transition ease-in-out ${
           props.burgerState
             ? 'origin-top translate-y-[18px] rotate-45 delay-150'
             : 'origin-center rotate-0'
         } `}
       ></span>
       <span
-        className={`absolute translate-y-[18px] w-full h-[4px] bg-orange-50 transition ease-in-out ${
+        className={`absolute translate-y-[18px] w-full h-[4px] bg-slate-100 transition ease-in-out ${
           props.burgerState ? 'translate-x-full' : 'translate-x-0 delay-150'
         } `}
       ></span>
       <span
-        className={`absolute bottom-0 w-full h-[4px] bg-orange-50 origin-center transition ease-in-out${
+        className={`absolute bottom-0 w-full h-[4px] bg-slate-100 origin-center transition ease-in-out${
           props.burgerState
             ? 'origin-top -translate-y-[18px] -rotate-45 delay-150'
             : 'origin-center rotate-0'

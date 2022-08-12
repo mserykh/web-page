@@ -5,12 +5,12 @@ import FactorCard from '../components/FactorCard/FactorCard';
 import Section from '../layouts/Section';
 
 const Factors = () => {
-  const factorsList = factorsData.map((f: FactorInfo) => (
+  const factorsList = factorsData.map((f: FactorInfo, i: number) => (
     <li
       key={f.id.toString()}
-      className="p-6 w-full max-w-3/4 grid grid-cols-4 grid-rows-3 text-orange-50"
+      className="factor-card p-6 w-full md:grid md:grid-cols-4 md:grid-rows-3 text-slate-100"
     >
-      <FactorCard factorInfo={f} />
+      <FactorCard factorInfo={f} factorIconId={(i + 1).toString()} />
     </li>
   ));
 

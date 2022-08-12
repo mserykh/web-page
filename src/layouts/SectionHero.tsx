@@ -5,7 +5,10 @@ type SectionProps = {
 
 const SectionHero = (props: SectionProps) => {
   return (
-    <section className="relative h-hero mx-auto mb-32 px-4 grid font-lato-black object-contain overflow-hidden">
+    <section
+      id={props.id}
+      className="relative h-hero mb-32 px-4 flex justify-center items-center gap-24 font-lato-black object-contain overflow-hidden"
+    >
       {props.children}
     </section>
   );

@@ -11,8 +11,8 @@ const NavigationLink = (props: NavigationLinkProps) => {
   return (
     <li>
       <Link
-        className="p-4 text-xl font-bold uppercase cursor-pointer"
-        activeClass="underline"
+        className="p-4 text-xl font-bold uppercase cursor-pointer hover:text-lime-400 active:text-fuchsia-400"
+        activeClass="text-fuchsia-500"
         to={props.href}
         offset={props.offset}
         spy={true}
