@@ -7,11 +7,11 @@ type QuoteProps = {
 
 const Quote = ({ quoteInfo }: QuoteProps) => {
   return (
-    <div className="mx-auto max-w-prose">
-      <blockquote className="mb-4 flex items-center leading-8">
+    <div className="mx-auto max-w-prose lg:text-3xl">
+      <blockquote className="mb-4 flex items-center text-slate-400 ">
         <p>{`"${quoteInfo.en}"`}</p>
       </blockquote>
-      <p className=" font-semibold"> - {quoteInfo.author}</p>
+      <p className="text-lime-400 font-semibold"> - {quoteInfo.author}</p>
     </div>
   );
 };

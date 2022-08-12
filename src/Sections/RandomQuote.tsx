@@ -14,24 +14,22 @@ const RandomQuote = () => {
     setIsLoading(true);
     const timeout = setTimeout(() => {
       loadQuote();
-    }, 500);
+    }, 750);
 
     return () => clearTimeout(timeout);
   }, []);
 
   const loadQuote = (): void => {
-    setTimeout(() => {
-      getQuote()
-        .then((result) => {
-          setQuote(result);
-          setIsLoading(false);
-          setError(false);
-        })
-        .catch(() => {
-          setIsLoading(false);
-          setError(true);
-        });
-    }, 750);
+    getQuote()
+      .then((result) => {
+        setQuote(result);
+        setIsLoading(false);
+        setError(false);
+      })
+      .catch(() => {
+        setIsLoading(false);
+        setError(true);
+      });
     setIsLoading(true);
   };
 
@@ -50,15 +48,22 @@ const RandomQuote = () => {
   }
 
   return (
-    <Section id="quote" title="Random quote">
-      <div className="mx-auto px-12 py-4 w-3/4 bg-orange-50 text-violet-600 rounded-lg">
-        {quoteData}
-      </div>
+    <Section
+      id="quote"
+      title="Random quote"
+      color="border-y-lime-400 border-y-4"
+    >
+      <div className="mx-auto px-6 py-6 lg:py-12 w-3/4">{quoteData}</div>
       <button
-        onClick={loadQuote}
-        className="block mx-auto mt-12 px-4 uppercase font-bold border-2 border-orange-50"
+        onClick={() => {
+          setIsLoading(true);
+          setTimeout(() => {
+            loadQuote();
+          }, 750);
+        }}
+        className=""
       >
-        Another one please
+        Another quote please
       </button>
     </Section>
   );
