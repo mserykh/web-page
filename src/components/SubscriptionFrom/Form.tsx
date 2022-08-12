@@ -9,10 +9,10 @@ export type FormValues = {
 };
 
 type FormProps = {
-  subscribe: (formData: FormValues) => void;
+  showPopup: (name: string) => void;
 };
 
-const Form = ({ subscribe }: FormProps): JSX.Element => {
+const Form = ({ showPopup }: FormProps): JSX.Element => {
   const form = useForm<FormValues>({
     mode: 'onSubmit',
     reValidateMode: 'onSubmit',
@@ -28,25 +28,21 @@ const Form = ({ subscribe }: FormProps): JSX.Element => {
     );
 
   const onSubmit = (data: FormValues): void => {
-    subscribe({ ...data });
+    showPopup(data.name);
     form.reset();
   };
 
   return (
     <div className="">
       <form
-        className=""
+        className="flex flex-col gap-6"
         onSubmit={form.handleSubmit(onSubmit)}
         data-testid="form"
       >
         <EmailInput form={form} />
         <NameInput form={form} />
-        <button
-          type="submit"
-          className="block mx-auto mt-12 px-4 uppercase font-bold border-2 border-orange-50"
-          disabled={isSubmitDisabled}
-        >
-          Suscribe to IT news
+        <button type="submit" disabled={isSubmitDisabled}>
+          Subcribe to IT news
         </button>
       </form>
     </div>

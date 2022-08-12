@@ -8,8 +8,10 @@ type NameInputProps = {
 
 const NameInput = ({ form }: NameInputProps): JSX.Element => {
   return (
-    <div>
-      <label htmlFor="name">Your name:</label>
+    <div className="input-wrapper">
+      <label htmlFor="name" className="label">
+        Your name:
+      </label>
       <input
         {...form.register('name', {
           required: 'Please type your name',
@@ -17,8 +19,13 @@ const NameInput = ({ form }: NameInputProps): JSX.Element => {
             value: 2,
             message: 'The name should contain at least 2 characters',
           },
-          onBlur: () => form.clearErrors('email'),
+          onBlur: () => form.clearErrors('name'),
         })}
+        className="input"
+        name="name"
+        id="name"
+        type="text"
+        placeholder="Type your name"
       />
       {form.formState.errors.name?.message && (
         <p className="">{form.formState.errors.name.message}</p>

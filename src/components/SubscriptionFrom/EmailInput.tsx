@@ -7,18 +7,20 @@ type EmailInputProps = {
 
 const EmailInput = ({ form }: EmailInputProps): JSX.Element => {
   return (
-    <div>
-      <label htmlFor="email">Email:</label>
+    <div className="input-wrapper">
+      <label htmlFor="email" className="label">
+        Email:
+      </label>
       <input
         {...form.register('email', {
           required: 'Please type your email',
-          minLength: {
-            value: 2,
-            message: 'The title should contain at least 2 characters',
+          pattern: {
+            value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+            message: 'invalid email address',
           },
           onBlur: () => form.clearErrors('email'),
         })}
-        className=""
+        className="input"
         name="email"
         id="email"
         type="email"
