@@ -10,10 +10,10 @@ This is a simple web-page with a background video and animations dedicated to th
 
 - Menu toggler icon (for smaller screens) is a pure CSS icon
 
-- The user can get a random quote about programming (using this (ProgrammingQuotesApi)[ProgrammingQuotesApi])
+- The user can get a random quote about programming (using this ([ProgrammingQuotesApi](https://programming-quotes-api.herokuapp.com/index.html))
 
-- Simple subscription form with input validation (it cannot subscribe you). 
-It shows a modal window if inputs are correct. First validation goes after first click, revalidation happens after entering valid data
+- A simple subscription form with the input validation (it cannot subscribe you). 
+It shows a modal window if inputs are correct. First validation goes after the first click, the revalidation happens after entering valid data
 
 
 ### Start project locally
@@ -24,7 +24,7 @@ It shows a modal window if inputs are correct. First validation goes after first
 npm ci
 ```
 
-3. Start project. It will be served on [http://localhost:3000](http://localhost:3000/).
+3. Start project. It will be served on [http://localhost:3000](http://localhost:3000/)).
 
 ```
 npm run start
