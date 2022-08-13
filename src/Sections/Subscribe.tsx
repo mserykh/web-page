@@ -27,8 +27,8 @@ const Subscribe = () => {
   const moveHandler = (
     event: React.MouseEvent<HTMLElement> | React.PointerEvent<HTMLElement>
   ) => {
-    const posX = -event.screenX / 25;
-    const posY = -event.screenY / 50;
+    const posX = -event.screenY / 100;
+    const posY = -event.screenX / 50;
 
     document.documentElement.style.setProperty('--posX', posX.toString());
     document.documentElement.style.setProperty('--posY', posY.toString());
