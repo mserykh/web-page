@@ -48,11 +48,7 @@ const RandomQuote = () => {
   }
 
   return (
-    <Section
-      id="quote"
-      title="Random quote"
-      color="border-y-lime-400 border-y-4"
-    >
+    <Section id="quote" title="Random quote" color="">
       <div className="mx-auto px-6 py-6 lg:py-12 w-3/4">{quoteData}</div>
       <button
         onClick={() => {
