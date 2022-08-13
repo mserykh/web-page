@@ -156,27 +156,27 @@
 }
 
 .image {
-  transform: translate(calc(var(--posX) * 0.75px), calc(var(--posY) * 0.5px));
+  transform: translate(calc(var(--posX) * 0.5px), calc(var(--posY) * 0.5px));
 }
 
 .colors {
-  transform: translate(calc(var(--posX) * 1.5px), calc(var(--posY) * 0.75px));
+  transform: translate(calc(var(--posX) * 1px), calc(var(--posY) * 0.75px));
 }
 
 .popup {
-  transform: translate(calc(var(--posX) * 1px), calc(var(--posY) * 1.25px));
+  transform: translate(calc(var(--posX) * 0.75px), calc(var(--posY) * 1.25px));
 }
 
 .message {
-  transform: translate(calc(var(--posX) * 1.5px), calc(var(--posY) * 0.75px));
+  transform: translate(calc(var(--posX) * 1px), calc(var(--posY) * 0.75px));
 }
 
 .mouse {
-  transform: translate(calc(var(--posX) * 3px), calc(var(--posY) * 1px));
+  transform: translate(calc(var(--posX) * 2.5px), calc(var(--posY) * 1px));
 }
 
 .desktop {
-  transform: translate(calc(var(--posX) * -0.5px), calc(var(--posY) * -0.5px));
+  transform: translate(calc(var(--posX) * -3px), calc(var(--posY) * -0.25px));
 }
 
 .desktop,
