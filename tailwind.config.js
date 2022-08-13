@@ -39,6 +39,14 @@ module.exports = {
           '0%, 40%, 100%': { transform: 'translateY(0)' },
           '20%': { transform: 'translateY(-0.5rem)' },
         },
+        'appear-right': {
+          '0%': { transform: 'translateX(100%) skewY(-3deg)', opacity: '0' },
+          '100%': { transform: 'translateY(0) skewY(-3deg)', opacity: '1' },
+        },
+        'appear-left': {
+          '0%': { transform: 'translateX(-100%) skewY(-3deg)', opacity: '0' },
+          '100%': { transform: 'translateY(0) skewY(-3deg)', opacity: '1' },
+        },
         spin: {
           '0%': { transform: 'rotate(0deg)' },
           '100%': { transform: 'rotate(360deg)' },
