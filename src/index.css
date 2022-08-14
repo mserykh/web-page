@@ -190,7 +190,7 @@
 .popup,
 .mouse,
 .colors {
-  transition: transform 100ms ease;
+  transition: all 100ms ease;
 }
 
 @media (min-width: 1280px) {
