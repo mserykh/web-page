@@ -19,7 +19,7 @@ const HeroLead = () => {
 
   return (
     <>
-      <img src={logo} className="h-56" alt="" />
+      <img src={logo} className="w-full max-w-[8rem] lg:max-w-[10rem]" alt="" />
       <p className="text-left text-3xl md:text-5xl lg:text-7xl">
         {' '}
         Helps to develop{' '}

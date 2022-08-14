@@ -33,6 +33,7 @@ module.exports = {
       },
       height: {
         hero: 'calc(100vh - 106px)',
+        menu: 'calc(100% - 106px)',
       },
       keyframes: {
         jump: {
@@ -51,6 +52,9 @@ module.exports = {
           '0%': { transform: 'rotate(0deg)' },
           '100%': { transform: 'rotate(360deg)' },
         },
+      },
+      transitionTimingFunction: {
+        'menu-out': 'cubic-bezier(0.21, 0.82, 0.64, 1.09)',
       },
     },
   },

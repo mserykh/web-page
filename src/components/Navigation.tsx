@@ -22,7 +22,7 @@ const Navigation = (props: NavigationProps) => {
       <ul
         className={`${
           props.isOpen ? 'translate-x-0' : 'translate-x-[100%]'
-        } bg-dark fixed top-0 left-0 w-full h-full mt-[90px] mx-auto items-center lg:mt-auto lg:translate-x-0 lg:static flex flex-col lg:flex-row lg:justify-self-end transition duration-1000 delay-250 ease`}
+        } bg-dark fixed top-0 left-0 w-full h-menu mt-[106px] mx-auto lg:mt-auto lg:translate-x-0 lg:static flex flex-col lg:flex-row items-center lg:justify-self-end justify-center gap-y-10 duration-500 delay-250 ease-menu-out`}
       >
         {linkList}
       </ul>
