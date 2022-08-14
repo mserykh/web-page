@@ -58,6 +58,7 @@ const RandomQuote = () => {
           }, 750);
         }}
         className=""
+        disabled={isLoading}
       >
         Another quote please
       </button>
