@@ -59,6 +59,8 @@ As continuation I would make the page more accessible and would write unit tests
 
 I enjoyed working on the page, I learned a new library and new techniques. 
 
+## Overview
+
 ### Some features of the page
 
 - Animation of the elements on scrolling
