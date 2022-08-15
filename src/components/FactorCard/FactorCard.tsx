@@ -26,7 +26,7 @@ const FactorCard = ({ factorInfo, factorIconId }: CardProps) => {
 
   return (
     <>
-      <div className="flex gap-4 lg:gap-8 place-self-end items-center md:row-start-1 md:row-end-3 md:col-start-1 md:col-end-3">
+      <div className="flex gap-4 lg:gap-8 md:place-self-end items-center md:row-start-1 md:row-end-3 md:col-start-1 md:col-end-3">
         <FactorIconBlock isVisible={isVisible} factorIconId={factorIconId} />
         <FactorNumber isVisible={isVisible} factorNumber={factorInfo.id} />
       </div>

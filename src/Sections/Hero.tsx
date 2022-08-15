@@ -1,7 +1,7 @@
 import SectionHero from '../layouts/SectionHero';
 import videoUrl from '../assets/videos/hero@reduced.mp4';
 import smallVideoUrl from '../assets/videos/hero@480.mp4';
-import logo from '../assets/icons/logo.png';
+import HeroLead from '../components/HeroLead';
 
 const Hero = () => (
   <>
@@ -19,20 +19,7 @@ const Hero = () => (
           media="all and (max-width: 480px)"
         ></source>
       </video>
-      <img src={logo} className="h-56" alt="" />
-      <p className="text-left text-3xl md:text-5xl lg:text-7xl">
-        Helps to develop{' '}
-        <span className="text-4xl md:text-6xl lg:text-8xl">modular</span>,<br />
-        <span className="text-4xl md:text-6xl lg:text-8xl">
-          independent
-        </span>,{' '}
-        <span className="text-4xl md:text-6xl lg:text-8xl">portable</span>,
-        <br />
-        and <span className="text-4xl md:text-6xl lg:text-8xl">
-          scalable
-        </span>{' '}
-        applications
-      </p>
+      <HeroLead />
     </SectionHero>
   </>
 );

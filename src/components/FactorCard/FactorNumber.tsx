@@ -11,7 +11,7 @@ const FactorNumber = (props: FactorNumberProps) => {
   }
   return (
     <span
-      className={`mr-4 lg:mr-10 leading-none opacity-0 font-black text-[120px] transition delay-100 duration-300 ${
+      className={`mr-4 lg:mr-10 leading-none opacity-0 font-black text-[72px] md:text-[120px] transition delay-100 duration-300 ${
         props.isVisible
           ? 'translate-y-0 opacity-40'
           : 'opacity-0 -translate-y-full'

@@ -7,26 +7,26 @@ import message from '../assets/images/message.png';
 
 const BonusImage = () => {
   return (
-    <div className="w-[32rem] h-[32rem]">
+    <div className="w-[32rem] max-w-full">
       <div className="w-full grid place-items-center">
         <div className="relative h-full w-full desktop-wrapper">
           <div>
             <img src={desktop} className="desktop" alt="" />
           </div>
-          <div className="select-none w-fit h-fit absolute right-0 bottom-0 mouse">
-            <img className="" src={mouse} alt="" />
+          <div className="select-none w-[16%] absolute right-0 bottom-0 mouse">
+            <img className="block w-full" src={mouse} alt="" />
           </div>
-          <div className="select-none absolute left-[20rem] bottom-[15rem] image">
-            <img className="" src={image} alt="" />
+          <div className="select-none w-[9%] absolute right-[30%] top-[44%] image">
+            <img className="block w-full" src={image} alt="" />
           </div>
-          <div className="select-none absolute left-[13rem] top-[8rem] colors">
-            <img className="" src={colors} alt="" />
+          <div className="select-none w-[22%] absolute left-[38%] top-[25%] colors">
+            <img className="block w-full" src={colors} alt="" />
           </div>
-          <div className="select-none absolute left-[20rem] top-[8rem] popup">
-            <img className="" src={popup} alt="" />
+          <div className="select-none w-[20%] absolute right-[19%] top-[25%] popup">
+            <img className="block w-full" src={popup} alt="" />
           </div>
-          <div className="select-none absolute left-[3.25rem] top-[15rem] message">
-            <img className="" src={message} alt="" />
+          <div className="select-none w-[19%] absolute left-[11%] bottom-[40%] message">
+            <img className="block w-full" src={message} alt="" />
           </div>
         </div>
       </div>

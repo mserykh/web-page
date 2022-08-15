@@ -68,9 +68,9 @@
 
   body {
     margin: 0;
-    font-size: 1.875rem;
-    line-height: 1.25;
-    @apply bg-dark text-slate-100;
+    font-size: 1.125rem;
+    line-height: 1.5;
+    @apply bg-dark text-slate-100 md:text-2xl lg:text-3xl;
   }
 
   button {
@@ -110,6 +110,11 @@
   .input:focus ~ .label {
     @apply text-fuchsia-500;
   }
+
+  .feature {
+  @apply relative text-dark inline-block before:block before:absolute before:w-full before:h-1/2 before:left-0 after:bottom-0 after:block after:absolute after:w-full after:h-1/2 after:left-0 after:-z-10 before:-z-10 before:-skew-y-3 before:bg-lime-400 after:-skew-y-3 after:bg-lime-400;
+}
+
 }
 
 .funky-border-1 {
@@ -156,27 +161,27 @@
 }
 
 .image {
-  transform: translate(calc(var(--posX) * 0.75px), calc(var(--posY) * 0.5px));
+  transform: translate(calc(var(--posX) * 0.5px), calc(var(--posY) * 0.5px));
 }
 
 .colors {
-  transform: translate(calc(var(--posX) * 1.5px), calc(var(--posY) * 0.75px));
+  transform: translate(calc(var(--posX) * 1px), calc(var(--posY) * 0.75px));
 }
 
 .popup {
-  transform: translate(calc(var(--posX) * 1px), calc(var(--posY) * 1.25px));
+  transform: translate(calc(var(--posX) * 0.75px), calc(var(--posY) * 1.25px));
 }
 
 .message {
-  transform: translate(calc(var(--posX) * 1.5px), calc(var(--posY) * 0.75px));
+  transform: translate(calc(var(--posX) * 1px), calc(var(--posY) * 0.75px));
 }
 
 .mouse {
-  transform: translate(calc(var(--posX) * 3px), calc(var(--posY) * 1px));
+  transform: translate(calc(var(--posX) * 2.5px), calc(var(--posY) * 1px));
 }
 
 .desktop {
-  transform: translate(calc(var(--posX) * -0.5px), calc(var(--posY) * -0.5px));
+  transform: translate(calc(var(--posX) * -3px), calc(var(--posY) * -0.25px));
 }
 
 .desktop,
@@ -185,7 +190,7 @@
 .popup,
 .mouse,
 .colors {
-  transition: transform 100ms ease;
+  transition: all 100ms ease;
 }
 
 @media (min-width: 1280px) {

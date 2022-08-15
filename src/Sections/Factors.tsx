@@ -8,7 +8,7 @@ const Factors = () => {
   const factorsList = factorsData.map((f: FactorInfo, i: number) => (
     <li
       key={f.id.toString()}
-      className="factor-card p-6 w-full md:grid md:grid-cols-4 md:grid-rows-3 text-slate-100"
+      className="factor-card p-6 w-full gap-12 grid md:grid-cols-4 md:grid-rows-3 text-slate-100"
     >
       <FactorCard factorInfo={f} factorIconId={(i + 1).toString()} />
     </li>
